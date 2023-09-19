@@ -43,11 +43,17 @@
             cur.next = list2
             list2 = list2.next
         }
+        //指向下一节点
         cur = cur.next
     }
+    //若链表长度不一，则处理剩余节点
     cur.next = list1 !== null ? list1 :list2
     return head.next
 };
+
+//穿针引线，用一根针穿链表节点
+
+
 
 
 //递归的写法
@@ -64,6 +70,7 @@
  * @return {ListNode}
  */
  var mergeTwoLists = function(list1, list2) {
+    //先确认list是否有值
     if(!list1) return list2;
     if(!list2) return list1;
     if(list1.val<=list2.val) {
