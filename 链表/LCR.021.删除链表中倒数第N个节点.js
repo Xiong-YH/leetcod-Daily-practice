@@ -45,4 +45,4 @@ var removeNthFromEnd = function(head, n) {
     return cur.next
 };
 
-
+//先用一个快指针走n步，然后快慢指针同时走，当快指针走到最后一个节点时，慢指针正好在倒数n个节点的前一节点
