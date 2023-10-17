@@ -29,9 +29,9 @@
     //优先map
     const m = new Map()
     for(let i = 0;i<nums.length;i++) {
-
+        //先得到差值
         let c = target - nums[i]
-
+        
         if(m.has(c)) return [m.get(c),i]
 
         m.set(nums[i],i)
@@ -40,3 +40,4 @@
 
 
 
+//先储存每一个索引的值，然后在后续遍历时，通过查找后续值和初始值的差值，最终得出结果
