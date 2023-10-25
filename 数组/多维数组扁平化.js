@@ -19,6 +19,12 @@ function flatten(list) {
     return res
 }
 
+let flatten = (nestedList) =>  {
+    nestedList.reduce((pre, cur) => pre.concat(Array.isArray(cur) ? flatten(cur): cur), [])
+}
+
+
+
 /*
 思路：因为是数组，我们可以考虑使用for遍历
     用新数组来存
