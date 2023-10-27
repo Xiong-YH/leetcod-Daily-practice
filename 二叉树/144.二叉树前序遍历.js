@@ -39,7 +39,12 @@
 /**
  * @param {TreeNode} root
  * @return {number[]}
+ * 
+ * 前序遍历迭代算法
+ * 通过while函数遍历，构造一个栈结构，栈先存入一个节点，确保栈内有值，将栈中元素弹出，结果数组中存入弹出值，然后递归左子树和又子树存入栈中
  */
+
+
 var preorderTraversal = function(root) {
     const res = []
     if(!root) {
@@ -60,4 +65,26 @@ var preorderTraversal = function(root) {
         
     }
     return res
+};
+
+
+/*
+递归版算法
+写一个递归函数，前序遍历递归模板
+*/
+
+var preorderTraversal = function(root) {
+    let res = []
+    function traverse(root) {
+    if(root == null) {
+        return
+    }
+    res.push(root.val)
+    traverse(root.left)
+    traverse(root.right)
+    }
+
+    traverse(root)
+    return res
+
 };
