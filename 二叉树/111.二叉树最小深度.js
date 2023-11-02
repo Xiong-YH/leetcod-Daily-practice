@@ -18,7 +18,8 @@ var minDepth = function(root) {
     queue.push(root)
 
     while(queue.length) {
-        for(let i = 0;i<queue.length;i++) {
+        let len = queue.length
+        for(let i = 0;i<len;i++) {
             const cur =queue.shift()
             if(cur.left == null && cur.right == null) {
                 return deepth
