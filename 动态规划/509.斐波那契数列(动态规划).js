@@ -54,3 +54,23 @@ var fib = function(n) {
     return f[n]
 };
 // 利用递归思想
+
+
+/**
+ * @param {number} n
+ * @return {number}
+ */
+
+var fib = function(n) {
+    if(n == 0 || n == 1) {
+        return n
+    }
+    let fib_1 = 0,fib_2 = 1
+    for(let i = 2;i<=n;i++) {
+        let fib_3 = fib_1+fib_2
+        fib_1 = fib_2
+        fib_2 = fib_3
+    }
+    return fib_2
+}
+
